@@ -4,6 +4,7 @@ const playAgainBtn = document.getElementById("play-button");
 const popup = document.getElementById("popup-container");
 const notification = document.getElementById("notification-container");
 const finalMessage = document.getElementById("final-message");
+const finalWord = document.getElementById("final-word");
 const figureParts = document.querySelectorAll(".figure-part");
 const hintBtn = document.getElementById("hint");
 const toolTip = document.querySelector(".tool-tip");
@@ -28,6 +29,7 @@ function displayWord() {
     const innerWord = wordEl.innerText.replace(/\n/g, '');
 
     if (innerWord === selectedWord) {
+        finalWord.innerText = innerWord;
         finalMessage.innerText = "Congratulations! You won!";
         popup.style.display = "flex";
     }
@@ -60,6 +62,7 @@ function updateWrongLetters() {
 
     //Check if lost 
     if (wrongLetters.length === figureParts.length) {
+        finalWord.innerText = selectedWord;
         finalMessage.innerText = "Sorry, You lost! Try again!";
         popup.style.display = "flex";
     }
