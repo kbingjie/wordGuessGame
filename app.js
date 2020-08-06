@@ -14,7 +14,6 @@ let selectedWord = words[Math.floor(Math.random() * words.length)];
 const correctLetters = [];
 const wrongLetters = [];
 
-
 //Show hidden word
 function displayWord() {
     let splitedWord = selectedWord.split("");
@@ -106,6 +105,7 @@ playAgainBtn.addEventListener("click", () => {
     updateWrongLetters();
     popup.style.display = "none";
     hintBtn.disabled = false;
+    toolTip.style.visibility = "visible";
 })
 
 //Hint button

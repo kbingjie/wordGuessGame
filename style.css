@@ -1,6 +1,5 @@
-* {
-    box-sizing: border-box;
-}
+* {box-sizing: border-box;}
+
 body {
     background-color: #34495e;
     color: #fff;
@@ -46,9 +45,7 @@ h1 {margin: 20px 0 0;}
     stroke-linecap: round;
 }
 
-.figure-part {
-    display: none;
-}
+.figure-part {display: none;}
 
 .word {
     display: flex;
